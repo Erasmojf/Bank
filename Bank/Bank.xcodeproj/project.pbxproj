@@ -15,6 +15,7 @@
 		F3301DEE29CB7EA500DE04C4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3301DED29CB7EA500DE04C4 /* LoginViewController.swift */; };
 		F3301DF029CB7EB000DE04C4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3301DEF29CB7EB000DE04C4 /* LoginView.swift */; };
 		F3301DF829CB7F8700DE04C4 /* BankTestsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3301DF729CB7F8700DE04C4 /* BankTestsUnitTests.swift */; };
+		F3301DFF29CBA56D00DE04C4 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3301DFE29CBA56D00DE04C4 /* DummyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		F3301DEF29CB7EB000DE04C4 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F3301DF529CB7F8700DE04C4 /* BankTestsUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankTestsUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3301DF729CB7F8700DE04C4 /* BankTestsUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTestsUnitTests.swift; sourceTree = "<group>"; };
+		F3301DFE29CBA56D00DE04C4 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			children = (
 				F3301DED29CB7EA500DE04C4 /* LoginViewController.swift */,
 				F3301DEF29CB7EB000DE04C4 /* LoginView.swift */,
+				F3301DFE29CBA56D00DE04C4 /* DummyViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3301DF029CB7EB000DE04C4 /* LoginView.swift in Sources */,
+				F3301DFF29CBA56D00DE04C4 /* DummyViewController.swift in Sources */,
 				F3301DEA29CB7E7400DE04C4 /* OnboardingContainerViewController.swift in Sources */,
 				F30A3CE429CB7BA800BCB9D6 /* AppDelegate.swift in Sources */,
 				F3301DEE29CB7EA500DE04C4 /* LoginViewController.swift in Sources */,
