@@ -111,26 +111,34 @@ class OnboardingContainerViewController: UIViewController {
         
         //Next
         NSLayoutConstraint.activate([
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: nextButton.trailingAnchor, multiplier: 2),
-            view.bottomAnchor.constraint(equalToSystemSpacingBelow: nextButton.bottomAnchor, multiplier: 4)
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter:
+                                            nextButton.trailingAnchor, multiplier: 2),
+            view.bottomAnchor.constraint(equalToSystemSpacingBelow:
+                                            nextButton.bottomAnchor, multiplier: 4)
         ])
         
         //Back
         NSLayoutConstraint.activate([
-            backButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
-            view.bottomAnchor.constraint(equalToSystemSpacingBelow: backButton.bottomAnchor, multiplier: 4)
+            backButton.leadingAnchor.constraint(equalToSystemSpacingAfter:
+                                                    view.leadingAnchor, multiplier: 2),
+            view.bottomAnchor.constraint(equalToSystemSpacingBelow:
+                                            backButton.bottomAnchor, multiplier: 4)
         ])
         
         //Close
         NSLayoutConstraint.activate([
-            closeButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
-            closeButton.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 2)
+            closeButton.leadingAnchor.constraint(equalToSystemSpacingAfter:
+                                                    view.leadingAnchor, multiplier: 2),
+            closeButton.topAnchor.constraint(equalToSystemSpacingBelow:
+                                                view.safeAreaLayoutGuide.topAnchor, multiplier: 2)
         ])
         
         //Done
         NSLayoutConstraint.activate([
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: doneButton.trailingAnchor, multiplier: 2),
-            view.bottomAnchor.constraint(equalToSystemSpacingBelow: doneButton.bottomAnchor, multiplier: 4)
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter:
+                                            doneButton.trailingAnchor, multiplier: 2),
+            view.bottomAnchor.constraint(equalToSystemSpacingBelow:
+                                            doneButton.bottomAnchor, multiplier: 4)
         ])
     }
 }
@@ -148,13 +156,13 @@ extension OnboardingContainerViewController: UIPageViewControllerDataSource {
 
     private func getPreviousViewController(from viewController: UIViewController) -> UIViewController? {
         guard let index = pages.firstIndex(of: viewController), index - 1 >= 0 else { return nil }
-        currentVC = pages[index - 1]
+        self.currentVC = pages[index - 1]
         return pages[index - 1]
     }
 
     private func getNextViewController(from viewController: UIViewController) -> UIViewController? {
         guard let index = pages.firstIndex(of: viewController), index + 1 < pages.count else { return nil }
-        currentVC = pages[index + 1]
+        self.currentVC = pages[index + 1]
         return pages[index + 1]
     }
 
@@ -171,13 +179,15 @@ extension OnboardingContainerViewController: UIPageViewControllerDataSource {
 extension OnboardingContainerViewController {
     
     @objc func nextTapped(_ sender: UIButton) {
-        guard let previousVC = getPreviousViewController(from: currentVC) else { return }
-        
-        pageViewController.setViewControllers([previousVC], direction: .reverse, animated: true, completion: nil)
+        guard let nextVC = getNextViewController(from: currentVC) else { return }
+        pageViewController.setViewControllers([nextVC], direction: .forward, animated: true, completion:  nil)
+     
     }
     
     @objc func backTapped(_ sender: UIButton) {
-        //TODO
+        guard let previousVC = getPreviousViewController(from: currentVC) else { return }
+        
+        pageViewController.setViewControllers([previousVC], direction: .reverse, animated: true, completion:  nil)
     }
     
     @objc func closeTapped(_ sender: UIButton) {

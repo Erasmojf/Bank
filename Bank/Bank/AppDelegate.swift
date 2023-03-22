@@ -13,6 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let loginViewController = LoginViewController()
     let onboardingContainerViewController = OnboardingContainerViewController()
     
+    var hasOnboarded = false
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
@@ -35,6 +37,7 @@ extension AppDelegate: LoginViewControllerDelegate {
 
 extension AppDelegate: OnboardingContainerViewControllerDelegate {
     func didFinishOnboarding() {
+        hasOnboarded = true
         print("foo - Did onboard")
     }
 }
