@@ -40,6 +40,17 @@
                ReferencedContainer = "container:Bank.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F3CFA24329EDF6E200404558"
+               BuildableName = "BankUnitTests.xctest"
+               BlueprintName = "BankUnitTests"
+               ReferencedContainer = "container:Bank.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
