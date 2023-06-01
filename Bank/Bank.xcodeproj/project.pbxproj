@@ -16,6 +16,7 @@
 		F3301DF029CB7EB000DE04C4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3301DEF29CB7EB000DE04C4 /* LoginView.swift */; };
 		F3301DF829CB7F8700DE04C4 /* BankTestsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3301DF729CB7F8700DE04C4 /* BankTestsUnitTests.swift */; };
 		F3301DFF29CBA56D00DE04C4 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3301DFE29CBA56D00DE04C4 /* DummyViewController.swift */; };
+		F337D4EA2A28E73F00F2C4ED /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F337D4E92A28E73F00F2C4ED /* ProfileManager.swift */; };
 		F35E2D8529CC974600852036 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35E2D8429CC974600852036 /* LocalState.swift */; };
 		F35E2D8729CCCD0700852036 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35E2D8629CCCD0700852036 /* UIViewController+Utils.swift */; };
 		F379EF1E2A097487004701AF /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F379EF1D2A097487004701AF /* ProfileTests.swift */; };
@@ -25,6 +26,7 @@
 		F39F79DF29D38ADF00F3B4DA /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39F79DE29D38ADF00F3B4DA /* AccountSummaryViewController.swift */; };
 		F3A6AB7E2A02DA8B00CD991A /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6AB7D2A02DA8B00CD991A /* Date+Utils.swift */; };
 		F3A6AB802A02DC8300CD991A /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6AB7F2A02DC8300CD991A /* AccountSummaryViewController+Networking.swift */; };
+		F3B073842A2910C30025E953 /* AccountSummaryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B073832A2910C30025E953 /* AccountSummaryViewControllerTests.swift */; };
 		F3B4D10429DC86190019297F /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B4D10329DC86190019297F /* AccountSummaryCell.swift */; };
 		F3C618B929F180320031D871 /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C618B829F180320031D871 /* CurrencyFormatterTests.swift */; };
 		F3CF44CE2A1BEB60005BF609 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF44CD2A1BEB60005BF609 /* SkeletonLoadable.swift */; };
@@ -67,6 +69,7 @@
 		F3301DF529CB7F8700DE04C4 /* BankTestsUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankTestsUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3301DF729CB7F8700DE04C4 /* BankTestsUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTestsUnitTests.swift; sourceTree = "<group>"; };
 		F3301DFE29CBA56D00DE04C4 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
+		F337D4E92A28E73F00F2C4ED /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		F35E2D8429CC974600852036 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		F35E2D8629CCCD0700852036 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		F379EF1D2A097487004701AF /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
@@ -76,6 +79,7 @@
 		F39F79DE29D38ADF00F3B4DA /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
 		F3A6AB7D2A02DA8B00CD991A /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 		F3A6AB7F2A02DC8300CD991A /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
+		F3B073832A2910C30025E953 /* AccountSummaryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewControllerTests.swift; sourceTree = "<group>"; };
 		F3B4D10329DC86190019297F /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		F3C618B829F180320031D871 /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
 		F3CF44CD2A1BEB60005BF609 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
@@ -186,6 +190,14 @@
 			path = BankTestsUnitTests;
 			sourceTree = "<group>";
 		};
+		F337D4E82A28E70000F2C4ED /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F337D4E92A28E73F00F2C4ED /* ProfileManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		F35E2D8329CC972900852036 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +219,7 @@
 				F3A6AB7F2A02DC8300CD991A /* AccountSummaryViewController+Networking.swift */,
 				F3B4D10129DC84A60019297F /* Header */,
 				F3B4D10229DC85DD0019297F /* Cells */,
+				F337D4E82A28E70000F2C4ED /* Networking */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -260,6 +273,7 @@
 			children = (
 				F379EF1D2A097487004701AF /* ProfileTests.swift */,
 				F379EF1F2A0975FA004701AF /* AccountTests.swift */,
+				F3B073832A2910C30025E953 /* AccountSummaryViewControllerTests.swift */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -399,6 +413,7 @@
 				F35E2D8729CCCD0700852036 /* UIViewController+Utils.swift in Sources */,
 				F3CF44D02A1BEC36005BF609 /* SkeletonCell.swift in Sources */,
 				F3A6AB7E2A02DA8B00CD991A /* Date+Utils.swift in Sources */,
+				F337D4EA2A28E73F00F2C4ED /* ProfileManager.swift in Sources */,
 				F3301DF029CB7EB000DE04C4 /* LoginView.swift in Sources */,
 				F3CF44CE2A1BEB60005BF609 /* SkeletonLoadable.swift in Sources */,
 				F35E2D8529CC974600852036 /* LocalState.swift in Sources */,
@@ -435,6 +450,7 @@
 				F3C618B929F180320031D871 /* CurrencyFormatterTests.swift in Sources */,
 				F379EF202A0975FA004701AF /* AccountTests.swift in Sources */,
 				F379EF1E2A097487004701AF /* ProfileTests.swift in Sources */,
+				F3B073842A2910C30025E953 /* AccountSummaryViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
