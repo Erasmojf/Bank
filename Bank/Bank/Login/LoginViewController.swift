@@ -134,12 +134,13 @@ extension LoginViewController {
             //ErrorMessage
         NSLayoutConstraint.activate([
             errorMessageLabel.topAnchor.constraint(equalToSystemSpacingBelow: signInButton.bottomAnchor, multiplier: 2),
-            errorMessageLabel.leadingAnchor.constraint(equalTo: signInButton.leadingAnchor),
-            errorMessageLabel.trailingAnchor.constraint(equalTo: signInButton.trailingAnchor)
+            errorMessageLabel.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
+            errorMessageLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
         ])
     }
 }
 
+//MARK: ACtions
 extension LoginViewController {
     @objc func signInTapped(sender: UIButton) {
         errorMessageLabel.isHidden = true
