@@ -37,11 +37,11 @@ extension LoginView {
         stackView.axis = .vertical
         stackView.spacing = 8
        
-        userNameTextField.placeholder = "userName"
+        userNameTextField.placeholder = "UserName"
         userNameTextField.delegate = self
         
-        passwordTextField.placeholder = "password"
-        passwordTextField.isSecureTextEntry = false
+        passwordTextField.placeholder = "Password"
+        passwordTextField.isSecureTextEntry = true
         passwordTextField.delegate = self
         passwordTextField.enablePasswordToggle()
         
