@@ -1,28 +1,28 @@
-    //
-    //  AccountSummaryViewController.swift
-    //  Bank
-    //
-    //  Created by Erasmo J.F Da Silva on 28/03/23.
-    //
+//
+//  AccountSummaryViewController.swift
+//  Bank
+//
+//  Created by Erasmo J.F Da Silva on 28/03/23.
+//
 
 import UIKit
 
 class AccountSummaryViewController: UIViewController {
-        //Request Models
+    //Request Models
     var profile: Profile?
     var accounts: [Account] = []
     
-        //View Models
+    //View Models
     var headerViewModel = AccountSummaryHeaderView
         .ViewModel(welcomeMessage: "Welcome", name: "", date: Date())
     var accountCellViewModels: [AccountSummaryCell.ViewModel] = []
     
-        //Components
+    //Components
     var tableView = UITableView()
     var headerView = AccountSummaryHeaderView(frame: .zero)
     let refreshControl = UIRefreshControl()
     
-        //Networking
+    //Networking
     var profileManager: ProfileManageable = ProfileManager()
     
     //Error Alert
@@ -133,12 +133,12 @@ extension AccountSummaryViewController: UITableViewDelegate {
     }
 }
 
-    // MARK: - Networking
+// MARK: - Networking
 extension AccountSummaryViewController {
     private func fetchData() {
         let group = DispatchGroup()
         
-            // Testing - random number selection
+        // Testing - random number selection
         let userId = String(Int.random(in: 1..<4))
         
         fetchProfile(group: group, userId: userId)
@@ -195,13 +195,16 @@ extension AccountSummaryViewController {
     
     private func configureTableCells(with accounts: [Account]) {
         accountCellViewModels = accounts.map {
-            AccountSummaryCell.ViewModel(accountType: $0.type, accountName: $0.name, balance: $0.amount)
+            AccountSummaryCell.ViewModel(accountType: $0.type,
+                                         accountName: $0.name,
+                                         balance: $0.amount)
         }
     }
     
     private func displayError(_ error: NetworkError) {
         let titleAndMessage = titleAndMessage(for: error)
-        self.showErrorAlert(title: titleAndMessage.0, message: titleAndMessage.1)
+        self.showErrorAlert(title: titleAndMessage.0,
+                            message: titleAndMessage.1)
     }
     
     private func titleAndMessage(for error: NetworkError) -> (String,String) {
@@ -211,10 +214,10 @@ extension AccountSummaryViewController {
             
         case .serverError:
             title = "Server Error"
-            message = "We could not process your request. Please try again."
-        case .decodingError:
-            title = "Network Error"
             message = "Ensure you are connected to the internet. Please try again."
+        case .decodingError:
+            title = "Decoding Error"
+            message = "We could not process your request. Please try again."
         }
         return (title, message)
     }
@@ -227,7 +230,7 @@ extension AccountSummaryViewController {
     }
 }
 
-    //MARK: Actions
+//MARK: Actions
 extension AccountSummaryViewController {
     @objc func logoutTapped(sender: UIButton){
         NotificationCenter.default.post(name: .logout, object: nil)
@@ -247,7 +250,7 @@ extension AccountSummaryViewController {
     }
 }
 
-    //MARK: Unit testing
+//MARK: Unit testing
 extension AccountSummaryViewController {
     func titleAndMessageForTesting(for error: NetworkError) -> (String,String) {
         return titleAndMessage(for: error)

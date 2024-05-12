@@ -9,8 +9,7 @@ import Foundation
 
 protocol ProfileManageable: AnyObject {
     func fetchProfile(forUserId userId: String,
-            completion: @escaping(Result<Profile,NetworkError>) -> Void)
-    
+                      completion: @escaping(Result<Profile,NetworkError>) -> Void)
 }
 
 enum NetworkError: Error {

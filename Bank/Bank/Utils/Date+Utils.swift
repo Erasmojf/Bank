@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 extension Date {
     static var bankeyDateFormatter: DateFormatter {
         let formatter = DateFormatter()

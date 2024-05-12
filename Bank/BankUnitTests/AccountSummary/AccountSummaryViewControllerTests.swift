@@ -38,13 +38,13 @@ class AccountSummaryViewControllerTests: XCTestCase {
     func testTitleAndMessageForServerError() throws {
         let titleAndMessage = vc.titleAndMessageForTesting(for: .serverError)
         XCTAssertEqual("Server Error", titleAndMessage.0)
-        XCTAssertEqual("We could not process your request. Please try again.", titleAndMessage.1)
+        XCTAssertEqual("Ensure you are connected to the internet. Please try again.", titleAndMessage.1)
     }
     
     func testTitleAndMessageForDecodingError() throws {
         let titleAndMessage = vc.titleAndMessageForTesting(for: .decodingError)
-        XCTAssertEqual("Network Error", titleAndMessage.0)
-        XCTAssertEqual("Ensure you are connected to the internet. Please try again.", titleAndMessage.1)
+        XCTAssertEqual("Decoding Error", titleAndMessage.0)
+        XCTAssertEqual("We could not process your request. Please try again.", titleAndMessage.1)
     }
     
     func testAlertForServerError() throws {
@@ -52,6 +52,6 @@ class AccountSummaryViewControllerTests: XCTestCase {
         vc.forceFerchProfile()
         
         XCTAssertEqual("Server Error", vc.errorAlert.title)
-        XCTAssertEqual("We could not process your request. Please try again.", vc.errorAlert.message)
+        XCTAssertEqual("Ensure you are connected to the internet. Please try again.", vc.errorAlert.message)
     }
 }
